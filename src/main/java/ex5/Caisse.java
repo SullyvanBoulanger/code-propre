@@ -7,14 +7,24 @@ public class Caisse {
 
 	private String nom;
 	private List<Item> items;
+	private double poidsMaxSupporte;
 
 	/** Constructeur
 	 * @param nom
 	 */
-	public Caisse(String nom) {
+	public Caisse(String nom, double poidsMaxSupporte) {
 		super();
 		this.nom = nom;
 		this.items = new ArrayList<>();
+		this.poidsMaxSupporte = poidsMaxSupporte;
+	}
+
+	public boolean addItem(Item item){
+		if(item.getPoids() > poidsMaxSupporte)
+			return false;
+		
+		items.add(item);
+		return true;
 	}
 
 	/** Getter pour l'attribut nom

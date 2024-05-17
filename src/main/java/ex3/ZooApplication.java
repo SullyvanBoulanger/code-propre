@@ -1,17 +1,30 @@
 package ex3;
+
+import static ex3.TypeAnimal.*;
+import static ex3.RegimeAlimentaire.*;
+
 public class ZooApplication {
 
 	public static void main(String[] args) {
+		Animal gazelle = new Animal("Gazelle", MAMMIFERE, HERBIVORE);
+		Animal zebre = new Animal("Zèbre", MAMMIFERE, HERBIVORE);
+		Animal lion = new Animal("Lion", MAMMIFERE, HERBIVORE);
+		Animal panthere = new Animal("Panthère", MAMMIFERE, CARNIVORE);
+		Animal requinBlanc = new Animal("Requin Blanc", POISSON, HERBIVORE);
+		Animal truiteDoree = new Animal("Truite Dorée", POISSON, HERBIVORE);
+		Animal boaConstrictor = new Animal("Boa Constrictor", SERPENT, CARNIVORE);
+		Animal python = new Animal("Python", SERPENT, CARNIVORE);
+
 		Zoo zoo = new Zoo("Thoiry");
 		
-		zoo.addAnimal("Gazelle", "MAMMIFERE", "HERBIVORE");
-		zoo.addAnimal("Zèbre", "MAMIFERE", "HERBIVORE");
-		zoo.addAnimal("Lion", "MAMMIFERE", "HERBIVORE");
-		zoo.addAnimal("Panthère", "MAMMIFERE", "CARNIVORE");
-		zoo.addAnimal("Requin blanc", "POISSON", "HERBIVORE");
-		zoo.addAnimal("Truite dorée", "POISSON", "HERBIVORE");
-		zoo.addAnimal("Boa constrictor", "SERPENT", "CARNIVORE");
-		zoo.addAnimal("Python", "SERPENT", "CARNIVORE");
+		zoo.addAnimal(gazelle);
+		zoo.addAnimal(zebre);
+		zoo.addAnimal(lion);
+		zoo.addAnimal(panthere);
+		zoo.addAnimal(requinBlanc);
+		zoo.addAnimal(truiteDoree);
+		zoo.addAnimal(boaConstrictor);
+		zoo.addAnimal(python);
 	}
 
 }
